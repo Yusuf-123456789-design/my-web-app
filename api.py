@@ -8,7 +8,7 @@ app = Flask(__name__)
 USERNAME = "buddy"
 PASSWORD = "12345"
 
-# 🔒 Authentication decorator
+
 def require_auth(f):
     @wraps(f)
     def decorated(*args, **kwargs):
@@ -55,3 +55,4 @@ def add_wallet():
 
 if __name__ == '__main__':
     app.run(debug=True, port=3000)
+
